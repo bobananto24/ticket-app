@@ -1,0 +1,93 @@
+.header{
+    display: flex;
+    /* position: absolute; */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color:transparent;
+    padding: 10px; 
+    width:100%;
+    border-bottom: 1px solid white;
+}
+.scroll{
+    background-color: #161616;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid;
+}
+.header-right{
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;  
+}
+.header-text{
+    padding: 0 25px 0 10px;
+    color: white;
+    font-size:15px;
+    text-decoration:none
+}
+.header-button{
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    background-color:transparent;
+}
+
+.logo{
+    width: 50px;
+    height:50px  
+}
+.nav-text{
+    padding: 0 10px 0 10px;
+    color: white;
+    font-size:12px;
+    text-decoration:none
+}
+.nav-text-orange{
+    color:#ff6600;
+    padding: 0 10px 0 10px;
+    font-size:12px;
+    text-decoration:none
+}
+.nav-head {
+    background-color: #161616;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;  
+}
+.bottom-tab-text{
+    padding: 0 10px 0 10px;
+    color: white;
+    font-size:10px;
+    text-decoration:none; 
+}
+.fixed-bottom-tab {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 768px){
+    .header{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        background-color:transparent;
+        padding: 10px; 
+        width: 100%;
+        border-bottom: 1px solid white;
+    
+    }
+    .scroll{
+        background-color: #161616;
+        position: fixed;
+        top: 0;
+        border-bottom: 1px solid;
+    }
+    
+}

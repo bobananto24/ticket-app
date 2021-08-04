@@ -1,0 +1,118 @@
+body{
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+
+}
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.error{
+  color: red
+}
+.container{
+  background-color: #ff6600;
+  text-align: center;
+}
+
+.home-body{
+  margin:150px 0;
+}
+.home-title{
+  font-size: 36px;
+  color: #fff;
+  font-family: "Montserrat-Regular";
+  margin: 0 0 20px;
+}
+
+.home-caption{
+  font-size: 26px;
+  color: #fff;
+  font-family: "Montserrat-Light";
+  margin: 0 0 45px;
+}
+.home-input {
+  padding: 10px;
+  border-radius: 40px;
+  width: 50%;
+  background-color: white;
+  display: inline-block;
+  margin:0 0 45px
+
+}
+.home-input-box { 
+  width: 88%;
+  font-size: 22px;
+  border: 0;
+  padding: 4px;
+}
+.home-input-box:focus {
+  outline-width: 0;
+}
+.home-search{
+  font-size:20px;
+  color:black;
+}
+.input {
+  width: -webkit-fill-available;
+  padding: 10px;
+  border:2px solid #dedede;
+}
+.label {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+}
+.form-control {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.btn-primary {
+  width: 48%;
+  padding: 10px;
+  background-color: #dedede;
+  border: 0;
+  margin: 5px 0;
+}
+.btn {
+  display: flex;
+  justify-content: space-between;
+}
+.single-btn {
+  display: flex;
+  justify-content:center;
+}
+.btn-single{
+  width: 70%;
+}
+.forgot-btn {
+  padding: 0 10px 0 10px;
+  color: #ff6600;
+  font-size:15px;
+  text-decoration:none;
+  text-align: center;
+}
+.checkbox{
+  padding: 5px 10px 5px 0;
+}
+.orange{
+  background-color: #ff6600;
+  color: white
+}
+.form-header {
+  border: 1px solid #dedede;
+  text-align: center;
+  padding: 25px 0 0 0; 
+  font-size:20px;
+  margin:0 0 10px 0
+}
+

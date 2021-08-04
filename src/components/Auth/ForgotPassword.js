@@ -45,7 +45,7 @@ const ForgotPassword = (props) => {
         <TopHeader />
       </div>
 
-      <div className="form-header">Reset Password</div>
+      <div className="form-header">Forgot Password</div>
       <div className="form-control">
         <form onSubmit={formik.handleSubmit}>
           <p style={{ textAlign: "center" }}>

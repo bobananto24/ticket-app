@@ -5,15 +5,16 @@
     align-items: center;
     text-align: center;
     background-color:transparent;
-    padding: 10px; 
-    width:100%;
+    padding: 10px 0; 
+   
     border-bottom: 1px solid white;
 }
-.scroll{
+.headerscroll{
     background-color: #161616;
     position: fixed;
     top: 0;
     border-bottom: 1px solid;
+    width: 100%;
 }
 .header-right{
     justify-content: space-between;
@@ -38,7 +39,9 @@
 
 .logo{
     width: 50px;
-    height:50px  
+    height:50px ;
+    margin-left: 30px;
+    cursor: pointer;
 }
 .nav-text{
     padding: 0 10px 0 10px;
@@ -67,6 +70,7 @@
     text-decoration:none; 
 }
 .fixed-bottom-tab {
+    /* padding: 0 10px 0 10px; */
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -83,7 +87,7 @@
         border-bottom: 1px solid white;
     
     }
-    .scroll{
+    .headerscroll{
         background-color: #161616;
         position: fixed;
         top: 0;

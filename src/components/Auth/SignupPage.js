@@ -112,7 +112,7 @@ const SignupPage = (props) => {
             <button className="btn-primary orange">REGISTER</button>
             <button
               className="btn-primary"
-              onClick={() => history.push("/sign-up")}
+              onClick={() => history.push("/login")}
             >
               LOGIN
             </button>
@@ -120,6 +120,11 @@ const SignupPage = (props) => {
         </form>
         <br />
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <br />
       <br />
       <br />

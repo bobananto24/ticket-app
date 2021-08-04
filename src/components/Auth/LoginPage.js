@@ -13,6 +13,8 @@ import { BottomTab, TopHeader } from "../Navbar";
 const LoginPage = (props) => {
   const history = useHistory();
   const dispatch = useDispatch();
+  const [load, setLoad] = useState(false);
+
   const [remember, setRemember] = useState(false);
 
   const formik = useFormik({
@@ -25,14 +27,14 @@ const LoginPage = (props) => {
   });
 
   const handleLogin = async (email, password) => {
-    dispatch(Loading(true));
+    setLoad(true)
     var data = {
       email: email,
       password: password,
     };
     let res = await Login(data);
     if (res.status != 200)
-      return dispatch(Loading(false)), alert(res.response.data.message);
+      return setLoad(false), alert(res.response.data.message);
     localStorage.setItem("credentials", JSON.stringify(data));
     localStorage.setItem("TOKEN", JSON.stringify(res.data.response));
     localStorage.setItem("isLogged", true);
@@ -40,7 +42,7 @@ const LoginPage = (props) => {
     if (res.data.response.user_role == 2)
       return (
         localStorage.setItem("isAdmin", true),
-        dispatch(Loading(false)),
+        setLoad(false),
         dispatch(Authentication(true)),
         history.push("/admin/dashboard")
       );
@@ -48,11 +50,11 @@ const LoginPage = (props) => {
     if (res.data.response.user_role == 3)
       return (
         localStorage.setItem("isAdmin", false),
-        dispatch(Loading(false)),
+     (setLoad(false)),
         dispatch(Authentication(true)),
         history.push("/user/dashboard")
       );
-    if (res.data.response.user_role == 4) return dispatch(Loading(false));
+    if (res.data.response.user_role == 4) return (setLoad(false)), alert("Wrong Credentials");
   };
 
   return (
@@ -88,7 +90,7 @@ const LoginPage = (props) => {
           <span>Keep me signed in</span>
           {/* </input> */}
           <div className="btn">
-            <button className="btn-primary orange">LOGIN</button>
+            <button className="btn-primary orange">{load ? "LOADING . . .":"LOGIN"}</button>
             <button
               className="btn-primary"
               onClick={() => history.push("/sign-up")}
@@ -99,7 +101,7 @@ const LoginPage = (props) => {
         </form>
         <br />
 
-        <Link className="forgot-btn">Forgot Your Password?</Link>
+        <Link className="forgot-btn"  onClick={() => history.push("/forgot-password")}>Forgot Your Password?</Link>
       </div>
       <div className="fixed-bottom-tab">
         <BottomTab />

@@ -16,7 +16,6 @@ import {
   ResetPassword,
   SignupPage,
 } from "../components/Auth";
-import { TopHeader } from "../components/Navbar/TopHeader";
 import { LoaderComponent } from "../constants";
 import { Login } from "../utils/API";
 
